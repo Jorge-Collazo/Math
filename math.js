@@ -6,6 +6,7 @@ var num4 = document.getElementById("num4");
 var num5 = document.getElementById("num5");
 var num6 = document.getElementById("num6");
 var output = document.getElementById("output");
+
 //Functions
 function leastToGreat(){
     var one = parseFloat(num1.value);
@@ -14,6 +15,7 @@ function leastToGreat(){
     var four = parseFloat(num4.value);
     var five = parseFloat(num5.value);
     var six = parseFloat(num6.value);
+    output.innerHTML = "";
 
     var o1 = 0;
     var o2 = 0;
@@ -62,11 +64,10 @@ function leastToGreat(){
         five = five;
     }
     
-
     o2 = Math.min(one, two, three, four, five);
 
     if(o2 === one){
-        one === two;
+        one = two;
         two = three;
         three = four;
         four = five;
@@ -136,7 +137,9 @@ function leastToGreat(){
     o6 = one
 
     output.innerHTML = o1 + ", " + o2 + ", " + o3 + ", " + o4 + ", " + o5 + ", " + o6 + ", "; 
+    return true;
 }
+
 function median(){
     var one = parseFloat(num1.value);
     var two = parseFloat(num2.value);
@@ -146,7 +149,129 @@ function median(){
     var six = parseFloat(num6.value);
     output.innerHTML="";
 
+    var o1 = 0;
+    var o2 = 0;
+    var o3 = 0;
+    var o4 = 0;
+    var o5 = 0;
+    var o6 = 0;
+
+    o1 = Math.min(one, two, three, four, five, six);
+    
+    if(o1 === one){
+        one = two;
+        two = three;
+        three = four;
+        four = five;
+        five = six;
+    }else if(o1 === two){
+        one = one;
+        two = three;
+        three = four;
+        four = five;
+        five = six;
+    }else if(o1 === three){
+        one = one;
+        two = two;
+        three = four;
+        four = five;
+        five = six;
+    }else if(o1 === four){
+        one = one;
+        two = two;
+        three = three;
+        four = five;
+        five = six;
+    }else if(o1 === five){
+        one = one;
+        two = two;
+        three = three;
+        four = four;
+        five = six;
+    }else if(o1 === six){
+        one = one;
+        two = two;
+        three = three;
+        four = four;
+        five = five;
+    }
+    
+    o2 = Math.min(one, two, three, four, five);
+
+    if(o2 === one){
+        one = two;
+        two = three;
+        three = four;
+        four = five;
+    }else if(o2 === two){
+        one = one;
+        two = three;
+        three = four;
+        four = five;
+    }else if(o2 === three){
+        one = one;
+        two = two;
+        three = four;
+        four = five;
+    }else if(o2 === four){
+        one = one;
+        two = two;
+        three = three;
+        four = five;
+    }else if(o2 === five){
+        one = one;
+        two = two;
+        three = three;
+        four = four;
+    }
+
+    o3 = Math.min(one, two, three, four);
+
+    if(o3 === one){
+        one = two;
+        two = three;
+        three = four;
+    }else if(o3 === two){
+        one = one;
+        two = three;
+        three = four;
+    }else if(o3 === three){
+        one = one;
+        two = two;
+        three = four;
+    }else if(o3 === four){
+        one = one;
+        two = two;
+        three = three;
+    }
+
+    o4 = Math.min(one, two, three);
+
+    if(o4 === one){
+        one = two;
+        two = three;
+    }else if(o4 === two){
+        one = one;
+        two = three;
+    }else if(o4 === three){
+        one = one;
+        two = two;
+    }
+
+    o5 = Math.min(one, two);
+
+    if(o5 === one){
+        one = two;
+    }else if(o5 === two){
+        one = one;
+    }
+
+    o6 = one
+
+    output.innerHTML = (o3 + o4) / (2);
+    return true;
 }
+
 function large(){
     var one = parseFloat(num1.value);
     var two = parseFloat(num2.value);
@@ -205,6 +330,7 @@ function small(){
         output.innerHTML = six;
     }*/
 }
+
 function mean(){
     var one = parseFloat(num1.value);
     var two = parseFloat(num2.value);
@@ -214,9 +340,10 @@ function mean(){
     var six = parseFloat(num6.value);
     output.innerHTML="";
 
-    output.innerHTML += (one + two + three + four + five + six) / (6);
+    output.innerHTML += Math.ceil((one + two + three + four + five + six) / (6));
     return true;
 }
+
 function mode(){
     var one = parseFloat(num1.value);
     var two = parseFloat(num2.value);
@@ -228,6 +355,7 @@ function mode(){
 
     
 }
+
 function range(){
     var one = parseFloat(num1.value);
     var two = parseFloat(num2.value);
@@ -241,6 +369,7 @@ function range(){
     var largest = Math.max(one, two, three, four, five, six);
     output.innerHTML = largest - smallest;
 }
+
 function duplicate(){
     var one = parseFloat(num1.value);
     var two = parseFloat(num2.value);
@@ -251,16 +380,33 @@ function duplicate(){
     output.innerHTML="";
     if(one === two || one === three || one === four || one === five || one === six){
         output.innerHTML += " "+one;
-    }if(two === three || two === four || two === five || two === six){
+    }
+
+    if(two === one){
+        output.innerHTML += "";
+    }else if(two === three || two === four || two === five || two === six){
         output.innerHTML += " "+two;
-    }if(three === four || three === five || three === six){
+    }
+
+    if(three === one || three === two){
+        output.innerHTML += "";
+    }else if(three === four || three === five || three === six){
         output.innerHTML += " "+three;
-    }if(four === five || four === six){
+    }
+
+    if(four === one || four === two || four === three){
+        output.innerHTML += "";
+    }else if(four === five || four === six){
         output.innerHTML += " "+four;
-    }if(five === six){
+    }
+
+    if(five === one || five === two || five === three || five === four){
+        output.innerHTML += "";
+    }else if(five === six){
         output.innerHTML += " "+five;
     }
 }
+
 function unique(){
     var one = parseFloat(num1.value);
     var two = parseFloat(num2.value);
@@ -283,7 +429,6 @@ function unique(){
         output.innerHTML += " "+six;
     }
     return true;
-
 
     //Didn't work, 
     /*if(one === two || one === three || one === four || one === five || one === six){
