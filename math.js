@@ -16,7 +16,6 @@ function leastToGreat(){
     var five = parseFloat(num5.value);
     var six = parseFloat(num6.value);
     output.innerHTML = "";
-
     var o1 = 0;
     var o2 = 0;
     var o3 = 0;
@@ -489,7 +488,6 @@ function mode(){
     var m4 = 1;
     var m5 = 1;
     var m6 = 1;
-    var max = Math.max(m1, m2, m3, m4, m5, m6)
     output.innerHTML="";
 
     if (one === two){
@@ -542,8 +540,9 @@ function mode(){
         m5++;
     }
 
-    if(m1 === "1" && m2 === "1" && m3 === "1" && m4 === "1" && m5 === "1" && m6 === "1"){
-        output.innerHTML = "There is no mode"
+    var max = Math.max(m1, m2, m3, m4, m5, m6)
+    if(m1 === 1 && m2 === 1 && m3 === 1 && m4 === 1 && m5 === 1 && m6 === 1){
+        output.innerHTML = "There are no dupes"
     }else if(max === m1){
         output.innerHTML = one;
     }else if(max === m2){
