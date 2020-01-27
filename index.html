@@ -9,26 +9,26 @@
     <script src="math.js" defer></script>
 </head>
 <body>
+        <!--Numbers-->
+        <header>
+            <h2>Math (six required)</h2>
+        </header>
     <section>
-            <!--Numbers-->
-            <header>
-                <h2>Numbers (six required)</h2>
-            </header>
         <form>
+            <img id="math" src="math.png" width="200px" height="150px" alt="Math is Math"><br/>
             Number One:<br>
-            <input type="text" id="num1"><br/>
+            <input type="text" id="num1" class="numbers"><br/>
             Number Two: <br/>
-            <input type="text" id="num2"><br/>
+            <input type="text" id="num2" class="numbers"><br/>
             Number Three:<br>
-            <input type="text" id="num3"><br/>
+            <input type="text" id="num3" class="numbers"><br/>
             Number Four: <br/>
-            <input type="text" id="num4"><br/>
+            <input type="text" id="num4" class="numbers"><p id="output"></p><br/>
             Number Five:<br>
-            <input type="text" id="num5"><br/>
+            <input type="text" id="num5" class="numbers"><br/>
             Number Six: <br/>
-            <input type="text" id="num6"><br/>
+            <input type="text" id="num6" class="numbers"><br/><br/>
 
-            <p id="output"></p><br/>
             <button class="click" name="submit" type="button" onclick="leastToGreat()">Orders least to greatest</button>
             <button class="click" name="submit" type="button" onclick="median()">Find the median</button> 
             <button class="click" name="submit" type="button" onclick="large()">Find the largest number</button> <br/><br/>
@@ -38,6 +38,8 @@
             <button class="click" name="submit" type="button" onclick="range()">Find the range</button> 
             <button class="click" name="submit" type="button" onclick="duplicate()">Find the duplicate numbers</button>
             <button class="click" name="submit" type="button" onclick="unique()">Find the unique numbers</button> <br/><br/>
+            <button class="click" name="submit" type="button" onclick="add()">Add the numbers</button>
+            <button class="click" name="submit" type="button" onclick="multiply()">Multipy the numbers</button>
         </form>
     </section>
 </body>

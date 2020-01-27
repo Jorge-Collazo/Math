@@ -351,9 +351,80 @@ function mode(){
     var four = parseFloat(num4.value);
     var five = parseFloat(num5.value);
     var six = parseFloat(num6.value);
+    var m1 = 1;
+    var m2 = 1;
+    var m3 = 1;
+    var m4 = 1;
+    var m5 = 1;
+    var m6 = 1;
+    var max = Math.max(m1, m2, m3, m4, m5, m6)
     output.innerHTML="";
 
-    
+    if (one === two){
+        m1++;
+    }
+    if (one === three){
+        m1++;
+    }
+    if (one === four){
+        m1++;
+    }
+    if (one === five){
+        m1++;
+    }
+    if (one === six){
+        m1++;
+    }
+
+    if (two === three){
+        m2++;
+    }
+    if (two === four){
+        m2++;
+    }
+    if (two === five){
+        m2++;
+    }
+    if (two === six){
+        m2++;
+    }
+
+    if (three === four){
+        m3++;
+    }
+    if (three === five){
+        m3++;
+    }
+    if (three === six){
+        m3++;
+    }
+
+    if (four === five){
+        m4++;
+    }
+    if (four === six){
+        m4++;
+    }
+
+    if (five === six){
+        m5++;
+    }
+
+    if(m1 === "1" && m2 === "1" && m3 === "1" && m4 === "1" && m5 === "1" && m6 === "1"){
+        output.innerHTML = "There is no mode"
+    }else if(max === m1){
+        output.innerHTML = one;
+    }else if(max === m2){
+        output.innerHTML = two;
+    }else if(max === m3){
+        output.innerHTML = three;
+    }else if(max === m4){
+        output.innerHTML = four;
+    }else if(max === m5){
+        output.innerHTML = five;
+    }else if(max === m6){
+        output.innerHTML = six;
+    }
 }
 
 function range(){
@@ -454,5 +525,29 @@ function unique(){
     }if(six !== one || six !== two || six !== three || six !== four || six !== five){
         output.innerHTML = "";
     }*/
+}
+
+function add(){
+    var one = parseFloat(num1.value);
+    var two = parseFloat(num2.value);
+    var three = parseFloat(num3.value);
+    var four = parseFloat(num4.value);
+    var five = parseFloat(num5.value);
+    var six = parseFloat(num6.value);
+    output.innerHTML="";
+
+    output.innerHTML = one + two + three+ four + five + six;
+}
+
+function multiply(){
+    var one = parseFloat(num1.value);
+    var two = parseFloat(num2.value);
+    var three = parseFloat(num3.value);
+    var four = parseFloat(num4.value);
+    var five = parseFloat(num5.value);
+    var six = parseFloat(num6.value);
+    output.innerHTML="";
+
+    output.innerHTML = one * two * three * four * five * six;
 }
 

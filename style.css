@@ -4,8 +4,19 @@ html{
 }
 
 body{
-    background: radial-gradient(rgb(255, 255, 255),rgb(185, 214, 255), rgb(139, 187, 255), rgb(94, 161, 255),
-                                rgb(62, 120, 255), rgb(25, 117, 255));    
+    background: radial-gradient(rgb(49, 49, 49),rgb(255, 255, 255),rgb(214, 213, 213), rgb(160, 160, 160), rgb(78, 78, 78)); 
+}
+header{
+    text-align: center;
+}
+section{
+    width: 550px;
+    height: auto;
+    background-color: rgba(42, 42, 255, 0.856);
+    margin: 100px auto;
+    padding: 10px;
+    border: double 15px black;
+    border-radius: 25px;
 }
 button{
     background-color: black;
@@ -22,5 +33,30 @@ button:hover{
 }
 input{
     background-color: black;
-    color:white
+    color:white;
+    width: 50px;
+    height: 25px;
+    font-size: 1em;
+}
+#output{
+    border: rgb(0, 0, 0) solid 5px;
+    border-radius: 400px;
+    width: 250px;
+    height: 50px;
+    float: right;
+    background-color: white;
+    text-align: center;
+    vertical-align: center;
+    font-size: 1.8em;
+}
+#math{
+    float: right;
+}
+/*Animations
+@keyframes ripple{
+    20%{background: radial-gradient(rgb(49, 49, 49),rgb(255, 255, 255),rgb(214, 213, 213), rgb(160, 160, 160), rgb(78, 78, 78));}
+    40%{background: radial-gradient(rgb(78, 78, 78), rgb(49, 49, 49),rgb(255, 255, 255),rgb(214, 213, 213), rgb(160, 160, 160));}
+    60%{background: radial-gradient(rgb(160, 160, 160),rgb(78, 78, 78), rgb(49, 49, 49),rgb(255, 255, 255),rgb(214, 213, 213));}
+    80%{background: radial-gradient(rgb(214, 213, 213),rgb(160, 160, 160),rgb(78, 78, 78), rgb(49, 49, 49),rgb(255, 255, 255));}
+    100%{background: radial-gradient(rgb(255, 255, 255),rgb(214, 213, 213), rgb(160, 160, 160), rgb(78, 78, 78), rgb(49, 49, 49));}
 }
